@@ -1168,6 +1168,7 @@ function job_manager_dropdown_categories( $args = '' ) {
 		'placeholder'     => __( 'Choose a category&hellip;', 'wp-job-manager' ),
 		'no_results_text' => __( 'No results match', 'wp-job-manager' ),
 		'multiple_text'   => __( 'Select Some Options', 'wp-job-manager' ),
+		'required'        => false,
 	];
 
 	$r = wp_parse_args( $args, $defaults );
@@ -1211,7 +1212,8 @@ function job_manager_dropdown_categories( $args = '' ) {
 		set_transient( $categories_hash, $categories, DAY_IN_SECONDS * 7 );
 	}
 
-	$id = $r['id'] ? $r['id'] : $r['name'];
+	$id       = $r['id'] ? $r['id'] : $r['name'];
+	$required = $r['required'] ? 'required' : '';
 
 	$output = "<select name='" . esc_attr( $r['name'] ) . "[]' id='" . esc_attr( $id ) . "' class='" . esc_attr( $r['class'] ) . "' " . ( $r['multiple'] ? "multiple='multiple'" : '' ) . " data-placeholder='" . esc_attr( $r['placeholder'] ) . "' data-no_results_text='" . esc_attr( $r['no_results_text'] ) . "' data-multiple_text='" . esc_attr( $r['multiple_text'] ) . "'>\n";
 

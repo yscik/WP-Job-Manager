@@ -8,7 +8,7 @@
  * @author      Automattic
  * @package     wp-job-manager
  * @category    Template
- * @version     1.31.1
+ * @version     1.41.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -39,6 +39,7 @@ wp_dropdown_categories( apply_filters( 'job_manager_term_select_field_wp_dropdow
 	'name'             => isset( $field['name'] ) ? $field['name'] : $key,
 	'orderby'          => 'name',
 	'selected'         => $selected,
-	'hide_empty'       => false
+	'hide_empty'       => false,
+	'required'         => isset( $field['required'] ),
 ], $key, $field ) );
 if ( ! empty( $field['description'] ) ) : ?><small class="description"><?php echo wp_kses_post( $field['description'] ); ?></small><?php endif; ?>

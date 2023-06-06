@@ -8,7 +8,7 @@
  * @author      Automattic
  * @package     wp-job-manager
  * @category    Template
- * @version     1.31.1
+ * @version     1.41.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -34,7 +34,8 @@ $args = [
 	'name'         => isset( $field['name'] ) ? $field['name'] : $key,
 	'orderby'      => 'name',
 	'selected'     => $selected,
-	'hide_empty'   => false
+	'hide_empty'   => false,
+	'required'     => isset( $field['required'] ),
 ];
 
 if ( isset( $field['placeholder'] ) && ! empty( $field['placeholder'] ) ) $args['placeholder'] = $field['placeholder'];
