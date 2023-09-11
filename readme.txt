@@ -153,6 +153,14 @@ It then creates a database based on the parameters passed to it.
 
 == Changelog ==
 
+## 1.42.0 - 2023-09-11
+* Support dynamically added date form fields
+* Show/Hide company logo File Upload button (#2569)
+* Allow plugins to override renewal values (#2566)
+* Fix notice dismiss JS dependency error (#2557)
+* Test changelog generation
+* Always show search actions (#2454)
+
 ## 1.41.0 - 2023-09-11
 * Support dynamically added date form fields
 * Show/Hide company logo File Upload button (#2569)
@@ -181,17 +189,4 @@ It then creates a database based on the parameters passed to it.
 
 ## 1.40.1 - 2023-05-12
 * Fix: Icons not displaying properly
-
-## 1.40.0 - 2023-05-11
-* Enhancement: Improve licensing page experience
-* Enhancement: New email notifications setting
-* Enhancement: Improve discoverability of addon updates
-* Enhancement: New admin notices sytem with redesign
-* Fix: "Hide Expired Listings Content" setting
-* Fix: Hide expired job listings from archives
-* Fix: Show license notice only to users who can manage licenses
-* Fix: Select menu overlapping in Job Listing frontend
-* Fix: Company video overlapping when no tagline set
-* Change: Update tipTip library to use WooCommerce’s version
-* Change: Bumped minimum PHP version from 7.2 to 7.4
 
