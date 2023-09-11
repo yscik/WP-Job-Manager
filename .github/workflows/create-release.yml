@@ -24,4 +24,6 @@ jobs:
       - name: Install PHP dependencies
         run: composer install --no-ansi --no-interaction --prefer-dist --no-progress
       - name: Create Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: npm run release:create ${{ github.event.number }}
