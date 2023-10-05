@@ -13,7 +13,7 @@ const PLUGINS = {
 	'wp-job-manager': {
 		file: 'wp-job-manager.php',
 		constant: 'JOB_MANAGER_VERSION',
-		repo: 'Automattic/wp-job-manager',
+		repo: 'yscik/wp-job-manager',
 	},
 };
 
